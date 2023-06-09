@@ -130,3 +130,35 @@ nav a{
 #second-sec div:hover{
     translate: 0 -30px;
 }
+#team{
+    width: 700px;
+    margin: 100px auto;
+    text-align: center;
+}
+#heads{
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    margin: 0 auto;
+    width: 1200px;
+}
+#heads div{
+    margin: 10px auto;
+}
+#heads h1{
+    font-weight: 600;
+}
+#heads h2{
+    font-weight: 600;
+    font-size: 2ch;
+}
+#heads p{
+    color: darkgrey;
+    font-size: smaller;
+}
+#heads img{
+    width: 200px;
+    margin: 10px;
+    filter: grayscale(1);
+    border-radius: 360px;
+}
