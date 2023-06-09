@@ -10,27 +10,83 @@
     width: 100%;
     min-height: 100vh;
 }
-.first-sec nav{
+#top{
+    color: white;
+    display: flex;
+    padding: 20px 50px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+#top nav{
     margin: 0 auto;
+    margin: auto auto;
 }
-#logo-kucra{
-color: white;
+#top nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 10px;
 }
-#subscribe{
-    padding: 2px;
-    background-color: white;
-    border-radius: 40px;
+#top nav li{
+    display: inline;
+    margin: 0 10px;
+    font-weight: 500;
 }
-#subscribe input{
-    border: none;
+#top i{
+    color: white;
+    font-size: larger;
+    padding: 10px;
+    transition: 0.2s;
+}
+#top a:hover, #top i:hover{
     color: darkgray;
 }
+.first-sec main{
+    padding: 100px 200px;
+    display: flex;
+}
+.first-sec main h1{
+    line-height: 60px;
+    font-weight: 800;
+    font-size: xxx-large;
+}
+.first-sec main p{
+    margin: 20px 0;
+}
+.first-sec main img{
+    width: 600px;
+}
+.first-sec main article{
+    margin-right: 100px;
+    width: 500px;
+}
+#subscribe{
+    display: flex;
+    padding: 3px;
+    background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+}
+#subscribe input{
+    margin: 0 auto 0 10px;
+    outline: none;
+    border: none;
+}
 #subscribe button{
+    margin: 0 0 0 auto;
+    font-weight: 500;
     font-size: smaller;
     padding: 5px 10px;
     border-radius: 40px;
     color: white;
     background-color: #1294b8;
+    transition: 0.5s;
+}
+#subscribe button:hover{
+    background-color: white;
+    color: #1294b8;
 }
 .middle-sec{
     width: 550px;
@@ -40,13 +96,20 @@ color: white;
 .middle-sec p{
     color: rgb(164, 164, 164);
 }
-.second-sec{
+.second-sec main{
     display: flex;
     justify-content: center;
+    margin: 70px;
+}
+.second-sec main i{
+    padding: 10px;
+}
+.second-sec main p{
+    padding: 10px;
 }
 .second-sec article{
     box-sizing: border-box;
-    padding: 100px 15px;
+    padding: 50px 15px;
     font-size: small;
     font-weight: 300;
     text-align: center;
@@ -57,31 +120,15 @@ color: white;
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     margin: 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    transition: 0.5s;
+}
+.second-sec article:hover{
+    translate: 0 -30px;
 }
 .second-sec article h1{
-    margin-bottom: 10px;
     font-weight: 500;
     font-size: x-large;
 }
-main{
-    padding: 5% 10%;
-    display: flex;
-}
-main h1{
-    font-weight: 800;
-    font-size: xxx-large;
-}
-main img{
-    width: 600px;
-}
-main article{
-    margin-right: 100px;
-    width: 500px;
-}
-nav{
-    margin: auto auto;
-}
-nav a{
-    color: white;
-    text-decoration: none;
+.second-sec article i{
+    font-size: xx-large;
 }
