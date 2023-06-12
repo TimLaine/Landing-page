@@ -336,3 +336,47 @@ nav a{
 #sixth-sec div figcaption p i{
     padding-right: 5px;
 }
+#seventh-sec{
+    display: flex;
+    margin: 70px 50px;
+    height: 500px;
+}
+#seventh-sec img{
+    height: 100%;
+}
+.maindiv{
+    width: 40%;
+    margin: 0 auto;
+}
+.maindiv h1{
+    margin-bottom: 30px;
+}
+.maindiv p{
+    margin-bottom: 30px;
+    color: darkgray;
+}
+.numdiv{
+    display: flex;
+}
+.numdiv div{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px 0 0;
+}
+#seventh-sec button{
+    width: 140px;
+    padding: 10px 10px;
+    margin-left: 20px;
+    border: 2px solid #1294b8;
+    border-radius: 5px;
+    background-color: #1294b8;
+    color: white;
+    font-weight: 500;
+    transition: 0.2s;
+}
+#seventh-sec button:hover{
+    border: 2px solid #1294b8;
+    background-color: white;
+    color: #1294b8;
+    font-weight: 500;
+}
