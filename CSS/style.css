@@ -507,4 +507,9 @@ footer section a{
     border: 2px solid darkgray;
     border-radius: 360px;
     text-decoration: none;
+    transition: 0.2s;
+}
+footer section a:hover{
+    background-color: darkgray;
+    color: rgba(30, 30, 30, 1);
 }
