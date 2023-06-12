@@ -246,3 +246,23 @@ nav a{
     align-items: center;
     justify-content: center;
 }
+#fifth-sec h1{
+    margin: 20px;
+}
+#fifth-sec p{
+    text-align: center;
+    width: 30%;
+    color: darkgray;
+}
+#fifth-sec figure{
+    margin: 50px;
+}
+#fifth-sec figure img{
+    margin: 0 75px;
+    width: 150px;
+    filter: opacity(50%);
+    transition: 0.2s;
+}
+#fifth-sec figure img:hover{
+    filter: opacity(100%);
+}
