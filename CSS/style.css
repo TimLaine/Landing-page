@@ -5,7 +5,31 @@
     vertical-align: top;
     font-family: Poppins;
 }
+#backtotop{
+    display: flex;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    background-color: rgba(30, 30, 30, 1);
+    height: 100px;
+    width: 100px;
+    border-radius: 360px;
+    border: none;
+    font-size: xx-large;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+#backtotop a{
+    color: white;
+}
+#backtotop:hover{
+    cursor: pointer;
+    background-color: white;
+    color: rgba(30, 30, 30, 1);
+    border: 2px solid rgba(30, 30, 30, 1);
 
+}
 /* ********************** HEADER ********************** */
 
 #first-sec{
