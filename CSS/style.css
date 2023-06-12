@@ -5,6 +5,9 @@
     vertical-align: top;
     font-family: Poppins;
 }
+
+/* ********************** HEADER ********************** */
+
 #first-sec{
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     width: 100%;
@@ -88,6 +91,9 @@ nav a{
     background-color: white;
     color: #1294b8;
 }
+
+/* *************************** MAIN WEBSITE *************************** */
+
 #middle-sec{
     width: 550px;
     margin: 20px auto;
@@ -279,6 +285,11 @@ nav a{
     justify-content: center;
     align-items: center;
 }
+#sixth-sec div a{
+    text-decoration: none;
+    font-weight: 500;
+    color: #1294b8;
+}
 #sixth-sec div h2{
     font-size: 20px;
     text-align: left;
@@ -298,9 +309,30 @@ nav a{
 #sixth-sec div figure img{
     width: 100%;
     object-fit: cover;
+    transition: 0.2s;
 }
-#sixth-sec div figure:hover img{
-    width: 50%;
-    object-fit: cover;
-    background-color: rgba(0, 0, 0, 1);
+#sixth-sec div figure{
+    position: relative;
+}
+#sixth-sec div figcaption {
+    position: absolute;
+    width: 100%;
+    color : white;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    padding: 15px;
+    transition: 0.2s;
+}
+#sixth-sec div figcaption p{
+    display: flex;
+    color: white;
+    align-items: first baseline;
+}
+#sixth-sec div:hover figcaption{
+    opacity: 1;
+}
+#sixth-sec div figcaption p i{
+    padding-right: 5px;
 }
