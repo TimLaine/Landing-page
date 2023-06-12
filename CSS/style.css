@@ -44,7 +44,7 @@ nav a{
     transition: 0.2s;
 }
 #top a:hover, #top i:hover{
-    color: darkgray;
+    color: gray;
 }
 #bottom{
     padding: 100px 200px;
@@ -160,7 +160,7 @@ nav a{
     font-size: 2ch;
 }
 #heads p{
-    color: darkgrey;
+    color: grey;
     font-size: smaller;
 }
 #heads figure{
@@ -258,7 +258,7 @@ nav a{
 #fifth-sec p{
     text-align: center;
     width: 30%;
-    color: darkgray;
+    color: gray;
 }
 #fifth-sec figure{
     margin: 50px;
@@ -296,7 +296,7 @@ nav a{
     margin: 10px;
 }
 #sixth-sec div p{
-    color: darkgray;
+    color: gray;
     margin-bottom: 10px;
 }
 #sixth-sec div figure{
@@ -353,7 +353,7 @@ nav a{
 }
 .maindiv p{
     margin-bottom: 30px;
-    color: darkgray;
+    color: gray;
 }
 .numdiv{
     display: flex;
@@ -379,4 +379,100 @@ nav a{
     background-color: white;
     color: #1294b8;
     font-weight: 500;
+}
+#eighth-sec{
+    width: 100%;
+    height: 700px;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+}
+#text{
+    margin: 50px auto;
+    text-align: center;
+    width: 30%;
+}
+#text p{
+    color: gray;
+}
+#options{
+    display: flex;
+    margin: auto ;
+    width: 60%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    height: 470px;
+    width: 300px;
+    margin: auto 10px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+.card .price{
+    display: flex;
+    margin: 10px auto;
+    align-items: first baseline;
+}
+.card .price sup{
+    font-size: 30px;
+}
+.card .price h1{
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    font-size: xxx-large;
+    color: #1294b8;
+}
+.card .price p{
+    margin: 0;
+    padding: 0;
+    font-size: small;
+    color: darkgray;
+}
+.card p{
+    margin: 10px auto;
+}
+.card h2{
+    margin: 0 auto;
+}
+.cardbenefits{
+    display: flex;
+}
+.cardleft{
+    width: 50%;
+    line-height: 40px;
+}
+.cardleft p{
+    align-items: first baseline;
+    display: flex;
+}
+.cardleft p i{
+    padding-right: 5px;
+}
+.cardright{
+    width: 50%;
+    line-height: 40px;
+    text-align: right;
+}
+.fa-circle-check{
+    color: green;
+}
+.fa-circle-xmark{
+    color: red;
+}
+.card button{
+    height: 40px;
+    font-size: large;
+    background-color: #1294b8;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid #1294b8;
+    transition: 0.2s;
+}
+.card button:hover{
+    background-color: white;
+    color: #1294b8;
+    border-color: #1294b8;
 }
