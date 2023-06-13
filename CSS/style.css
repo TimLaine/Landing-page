@@ -5,6 +5,9 @@
     vertical-align: top;
     font-family: Poppins;
 }
+/* section {
+    height: 100vh;
+} */
 #backtotop{
     box-sizing: border-box;
     display: flex;
@@ -39,7 +42,6 @@
 #first-sec{
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     width: 100%;
-    min-height: 100vh;
 }
 #top{
     color: white;
@@ -75,8 +77,13 @@ nav a{
     color: gray;
 }
 #bottom{
-    padding: 100px 200px;
+    padding: 5% 10%;
     display: flex;
+    flex-wrap: wrap;
+}
+#bottom section{
+    width: 100%;
+    max-width: 450px;
 }
 #bottom h1{
     line-height: 60px;
@@ -86,19 +93,20 @@ nav a{
 #bottom p{
     margin: 20px 0;
 }
-#bottom img{
-    width: 600px;
+#bottom figure{
+    width: 50%;
 }
-#bottom section{
-    margin-right: 100px;
-    width: 500px;
+#bottom img{
+    width: 100%;
 }
 #subscribe{
+    box-sizing: border-box;
     display: flex;
     padding: 3px;
     background-color: white;
     border-radius: 40px;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 #subscribe input{
     margin: 0 auto 0 10px;
@@ -106,11 +114,13 @@ nav a{
     border: none;
 }
 #subscribe button{
+    box-sizing: border-box;
     margin: 0 0 0 auto;
     font-weight: 500;
     font-size: smaller;
     padding: 5px 10px;
     border-radius: 40px;
+    border: none;
     color: white;
     background-color: #1294b8;
     transition: 0.5s;
@@ -119,6 +129,19 @@ nav a{
     background-color: white;
     color: #1294b8;
     cursor: pointer;
+    border: 2px solid #1294b8;
+}
+
+@media screen and (max-width:1000px){
+    #bottom figure{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #bottom img{
+        padding: 0 20px;
+        margin: 0;
+        width: 90%;
+    }
 }
 
 /* *************************** MAIN WEBSITE *************************** */
@@ -127,14 +150,21 @@ nav a{
     width: 550px;
     margin: 20px auto;
     text-align: center;
+    max-height: 100px;
 }
 #middle-sec p{
     color: rgb(164, 164, 164);
 }
-#second-sec {
+#second-sec{
     display: flex;
     justify-content: center;
     margin: 70px;
+    flex-wrap: wrap;
+}
+@media screen and (min-width:1200px){
+    #second-sec{
+        max-height: 400px;
+    }
 }
 #second-sec div i{
     padding: 10px;
@@ -154,29 +184,35 @@ nav a{
     font-weight: 300;
     text-align: center;
     border-radius: 10px;
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
     color: white;
     background: radial-gradient(rgb(139, 195, 245), #1294b8);
     margin: 10px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
     transition: 0.5s;
 }
-#second-sec div:hover{
-    translate: 0 -30px;
+@media screen and (min-width:376px){
+    #second-sec div:hover{
+        translate: 0 -10px;
+    }
+}
+#third-sec{
+    width: 100%;
 }
 #team{
-    width: 700px;
+    width: 90%;
     margin: 100px auto;
+    padding: 0 20px;
     text-align: center;
 }
 #heads{
     text-align: center;
     font-weight: 500;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     margin-bottom: 100px;
-    width: 1200px;
 }
 #heads div{
     margin: 10px auto;
@@ -254,6 +290,9 @@ nav a{
     color: white;
     background-blend-mode: darken;
 }
+#fourth-sec h1{
+    text-align: center;
+}
 #fourth-sec p{
     text-align: center;
     width: 60%;
@@ -279,7 +318,9 @@ nav a{
     cursor: pointer;
 }
 #fifth-sec{
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     margin: 50px auto;
     align-items: center;
@@ -287,34 +328,40 @@ nav a{
 }
 #fifth-sec h1{
     margin: 20px;
+    text-align: center;
 }
 #fifth-sec p{
     text-align: center;
-    width: 30%;
+    width: 80%;
     color: gray;
 }
 #fifth-sec figure{
-    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 20px;
 }
 #fifth-sec figure img{
-    margin: 0 75px;
+    margin: 30px;
     width: 150px;
     filter: opacity(50%);
     transition: 0.2s;
 }
 #fifth-sec figure img:hover{
     filter: opacity(100%);
-    cursor: pointer;
 }
 #sixth-sec{
     margin: auto;
     display: flex;
-    width: 1500px;
-    padding-bottom: 150px;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: auto;
+    justify-content: center;
 }
 #sixth-sec div{
     width: 400px;
-    margin: auto;
+    margin: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -336,8 +383,8 @@ nav a{
 }
 #sixth-sec div figure{
     margin: 10px;
-    height: 300px;
-    width: 400px;
+    height: 70%;
+    width: 100%;
     overflow: hidden;
     border-radius: 8px;
 }
@@ -365,7 +412,7 @@ nav a{
     color: white;
     align-items: first baseline;
 }
-#sixth-sec div:hover figcaption{
+#sixth-sec div figure:hover figcaption{
     opacity: 1;
     cursor: pointer;
 }
@@ -375,9 +422,12 @@ nav a{
 #seventh-sec{
     display: flex;
     margin: 70px 50px;
-    height: 500px;
+}
+#seventh-sec figure{
+    width: 50%;
 }
 #seventh-sec img{
+    width: 100%;
     height: 100%;
 }
 .maindiv{
@@ -397,7 +447,7 @@ nav a{
 .numdiv div{
     display: flex;
     flex-direction: column;
-    margin: 0 50px 0 0;
+    margin: 0 20px;
 }
 #seventh-sec button{
     width: 140px;
@@ -417,34 +467,59 @@ nav a{
     font-weight: 500;
     cursor: pointer;
 }
+@media screen and (max-width:1000px){
+    #seventh-sec figure{
+        display: none;
+    }
+    .maindiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .numdiv{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+     #seventh-sec button{
+        margin: 0 auto;
+     }
+}
 #eighth-sec{
     width: 100%;
-    height: 700px;
     padding-bottom: 200px;
     background-color: lightgray;
     display: flex;
     flex-direction: column;
 }
 #text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 50px auto;
+    padding: 0 10%;
     text-align: center;
-    width: 30%;
 }
 #text p{
     color: gray;
 }
 #options{
     display: flex;
-    margin: auto ;
-    width: 60%;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
 }
 .card{
     display: flex;
     flex-direction: column;
     background-color: white;
-    height: 470px;
-    width: 300px;
-    margin: auto 10px;
+    max-height: 470px;
+    min-width: 300px;
+    margin: 20px;
     border-radius: 10px;
     padding: 10px 20px;
 }
@@ -522,25 +597,25 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 300px;
     background-color: rgba(30, 30, 30, 1);
     color: darkgray;
     text-align: center;
 }
 footer section{
     margin: auto;
+    width: 100%;
 }
 footer section p{
-    margin: 10px;
     display: flex;
     justify-content: center;
+    padding: 10px;
 }
 footer section a{
     display: flex;
     align-items: center;
     justify-content: center;
     color: darkgray;
-    margin: 30px;
+    margin: 10px 2%;
     width: 40px;
     height: 40px;
     border: 2px solid darkgray;
@@ -556,6 +631,78 @@ footer section a:hover{
 
 /* ******************** RESPONSIVE ******************** */
 
-@media (max-width: 375px) {
-
+@media screen and (max-width: 376px){
+    #backtotop{
+        display: none;
+    }
+    #top{
+        background-color: rgba(30, 30, 30, 1);
+        position: sticky;
+        top: 0;
+        padding: 10px 30px;
+        z-index: 10;
+    }
+    #bottom{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0;
+    }
+    #bottom section{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 80px 40px;
+    }
+    #bottom h1{
+        font-size: 30px;
+        line-height: normal;
+    }
+    #bottom form{
+        margin-top: 50px;
+    }
+    #bottom figure{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    #bottom img{
+        padding: 0 20px;
+        margin: 0;
+        width: 90%;
+    }
+    #middle-sec{
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 20px;
+    }
+    #second-sec{
+        margin: 0px;
+        padding: 30px;
+    }
+    #second-sec div{
+        box-sizing: border-box;
+        margin: 20px 0;
+        transition: 0.5s;
+        max-height: 200px;
+        padding: 2% 0;
+    }
+    #second-sec div:hover{
+        color: #1294b8;
+        background: white;
+        border: 2px solid #1294b8;
+    }
+    #third-sec #team{
+        margin: 50px 0;
+    }
+    #fifth-sec figure{
+        margin-top: 0;
+    }
+    #fifth-sec figure img{
+        margin: 20px;
+        width: 120px;
+        filter: opacity(50%);
+        transition: 0.2s;
+    }
+    #eighth-sec{
+        padding-bottom: 100px;
+    }
 }
