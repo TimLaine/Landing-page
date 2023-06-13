@@ -20,6 +20,8 @@
     align-items: center;
     justify-content: center;
     transition: 0.2s;
+    z-index: 10;
+    border: 2px solid white;
 }
 #backtotop{
     color: white;
