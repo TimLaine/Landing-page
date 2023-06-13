@@ -6,6 +6,7 @@
     font-family: Poppins;
 }
 #backtotop{
+    box-sizing: border-box;
     display: flex;
     position: fixed;
     bottom: 20px;
@@ -20,15 +21,16 @@
     justify-content: center;
     transition: 0.2s;
 }
-#backtotop a{
+#backtotop{
     color: white;
+    display: flex;
+    text-decoration: none;
 }
 #backtotop:hover{
     cursor: pointer;
     background-color: white;
-    color: rgba(30, 30, 30, 1);
     border: 2px solid rgba(30, 30, 30, 1);
-
+    color: rgba(30, 30, 30, 1);
 }
 /* ********************** HEADER ********************** */
 
