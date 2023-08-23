@@ -54,7 +54,7 @@
                         </form>
                     </section>
                     <figure>
-                        <img src="illustration.svg" alt="illustration-landing">
+                        <img src="img/illustration.svg" alt="illustration-landing">
                     </figure>
                 </div>
             </section>
