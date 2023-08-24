@@ -1,3 +1,7 @@
+<?php 
+session_start();
+require("db-functions.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -232,69 +236,46 @@
                     <p>It is a long established fact that a reader will be of a page when established fact looking at its layout.</p>
                 </div>
                 <div id="options">
-                    <div class="card"><h2>Starter</h2>
-                        <div class="price"><h1><sup>$</sup>9</h1><p>/month</p></div>
-                        <div class="cardbenefits">                        
+                    <?php 
+                    foreach($landing as $pricing){
+                        $price = $pricing["prix"] * (1-($pricing["reduction"]/100));
+                        $onlineSpace = $pricing["onlinespace"];
+                        $onlineSpaceUnit = "MB";
+                        if($pricing["onlinespace"] >= 1000){
+                            $onlineSpaceUnit = "GB";
+                            $onlineSpace = $onlineSpace/1000;
+                        }
+                        
+                        $domain = $pricing["domain"];
+                        if($domain == 0){
+                            $domain = "Unlimited";
+                        }
+                        $support = ($pricing["support"]) ? "Yes" : "No";
+                        $HiddenFees = ($pricing["hidden_fees"]) ? "Yes" : "No";
+                        $SupportMark = ($pricing["support"]) ? "fa-circle-check" : "fa-regular fa-circle-xmark";
+                        $HiddenFeesMark = ($pricing["hidden_fees"]) ? "fa-circle-check" : "fa-regular fa-circle-xmark";
+                        ?>
+                    <div class="card"><h2><?= $pricing["nom_pricing"] ?></h2>
+                    <div class="price"><h1><sup>$</sup><?= round($price, 2) ?></h1><p>/month</p></div>
+                    <div class="cardbenefits">                        
                             <div class="cardleft">
                                 <p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>
                                 <p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>
-                                <p><i class="fa-regular fa-circle-xmark"></i>Support.No</p>
+                                <p><i class="fa-regular <?= $SupportMark ?>"></i>Support.No</p>
                                 <p><i class="fa-regular fa-circle-check"></i>Domain</p>
-                                <p><i class="fa-regular fa-circle-xmark"></i>Hidden Fees</p>
+                                <p><i class="fa-regular <?= $HiddenFeesMark ?>"></i>Hidden Fees</p>
                             </div>
                             <div class="cardright">
-                                    <p>1GB</p>
-                                    <p>500MB</p>
-                                    <p>No</p>
-                                    <p>1</p>
-                                    <p>No</p>
+                                    <p><?= $pricing["bandwidth"]?> GB</p>
+                                    <p><?= $onlineSpace ?> <?= $onlineSpaceUnit ?></p>
+                                    <p><?= $support ?></p>
+                                    <p><?= $domain ?></p>
+                                    <p><?= $HiddenFees ?></p>
+                                </div>
                             </div>
+                            <button>Join Now</button>
                         </div>
-                        <button>Join Now</button>
-                    </div>
-                    <div class="card" id="bestcard"><h2>Advanced</h2>
-                        <div class="price"><h1><sup>$</sup>19</h1><p>/month</p></div>
-                        <div class="cardbenefits">                        
-                            <div class="cardleft">
-                                <p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Support.No</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Domain</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Hidden Fees</p>
-                            </div>
-                            <div class="cardright">
-                                    <p>2GB</p>
-                                    <p>1GB</p>
-                                    <p>Yes</p>
-                                    <p>3</p>
-                                    <p>No</p>
-                            </div>
-                            <div id="sale">
-                                <p>20% SALE</p>
-                            </div>
-                        </div>
-                        <button>Join Now</button>
-                    </div>
-                    <div class="card"><h2>Professional</h2>
-                        <div class="price"><h1><sup>$</sup>29</h1><p>/month</p></div>
-                        <div class="cardbenefits">                        
-                            <div class="cardleft">
-                                <p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Support.No</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Domain</p>
-                                <p><i class="fa-regular fa-circle-check"></i>Hidden Fees</p>
-                            </div>
-                            <div class="cardright">
-                                    <p>3GB</p>
-                                    <p>2GB</p>
-                                    <p>Yes</p>
-                                    <p>Unlimited</p>
-                                    <p>No</p>
-                            </div>
-                        </div>
-                        <button>Join Now</button>
-                    </div>
+                        <?php } ?>
                 </div>
             </section>
         </main>
