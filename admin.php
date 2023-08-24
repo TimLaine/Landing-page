@@ -43,49 +43,51 @@ onlinespaceChange(500, 1);
                                     <label>
                                         Name
                                     </label>
-                                    <input type="text" name="name">
+                                    <input type="text" name="name"
+                                    value="<?= $pricing["nom_pricing"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Price
                                     </label>
-                                    <input type="number" step="any" name="price">
+                                    <input type="number" step="any" name="price"
+                                    value="<?= $pricing["prix"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Sale
                                     </label>
-                                    <input type="number" name="sale">
+                                    <input type="number" name="sale" value="<?= $pricing["reduction"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Bandwidth
                                     </label>
-                                    <input type="number" step="any" name="bandwidth">
+                                    <input type="number" step="any" name="bandwidth" value="<?= $pricing["bandwidth"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Onlinespace
                                     </label>
-                                    <input type="number" step="any" name="onlinespace">
+                                    <input type="number" step="any" name="onlinespace" value="<?= $pricing["onlinespace"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Support
                                     </label>
-                                    <input type="number" step="any" name="support">
+                                    <input type="text" step="any" name="support" value="<?= $support ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Domain
                                     </label>
-                                    <input type="number" step="any" name="domain">
+                                    <input type="number" step="any" name="domain" value="<?= $pricing["domain"] ?>">
                                 </div>
                                 <div class="options">
                                     <label>
                                         Hidden Fees
                                     </label>
-                                    <input type="number" step="any" name="hiddenfees">
+                                    <input type="text" step="any" name="hiddenfees" value="<?= $HiddenFees ?>">
                                 </div>
                                 <div class="button">
                                     <input type="submit" name="submit" value="Update">
