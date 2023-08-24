@@ -5,3 +5,54 @@
     vertical-align: top;
     font-family: Poppins;
 }
+#layout{
+    display: flex;
+    flex-direction: column;
+}
+#title{
+    margin: auto;
+}
+#cards{
+    display: flex;
+    margin: auto;
+    width: 90%;
+}
+.card{
+    display: flex;
+    flex-wrap: wrap;
+    width: 36%;
+    /* border: solid; */
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.card form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 5%;
+}
+.options input{
+    border: 1px solid darkgray;
+    border-radius: 5px;
+}
+.button{
+    width: 100%;
+    display: flex;
+}
+.button input{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    background-color: #1294b8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    font-weight: 500;
+    font-size: large;
+}
