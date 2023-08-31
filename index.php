@@ -273,7 +273,9 @@ require("db-functions.php");
                                     <p><?= $HiddenFees ?></p>
                                 </div>
                             </div>
-                            <button>Join Now</button>
+                            <form action="traitement-admin.php" method="POST">
+                                <button type="submit" name="submit">Join Now</button>
+                            </form>
                         </div>
                         <?php } ?>
                 </div>

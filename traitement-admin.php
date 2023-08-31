@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("db-functions.php");
+
 if(isset($_POST['submit'])){
     
     $name = filter_input(INPUT_POST, "name");
