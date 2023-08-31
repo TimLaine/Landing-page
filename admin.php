@@ -1,11 +1,6 @@
 <?php
 session_start();
 require("db-functions.php");
-
-nameChange("Starter",1);
-priceChange(9, 1);
-bandwidthChange(1, 1);
-onlinespaceChange(500, 1);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,12 +33,12 @@ onlinespaceChange(500, 1);
                         $HiddenFees = ($pricing["hidden_fees"]) ? "Yes" : "No";
                         ?>
                         <div class="card">                        
-                            <form action="" method="" enctype="multipart/form-data">
+                            <form action="traitement-admin.php?id=<?= $pricing["id_pricing"] ?>" method="post">
                                 <div class="options">
                                     <label>
                                         Name
                                     </label>
-                                    <input type="text" name="name"
+                                    <input type="text" step="any" name="name"
                                     value="<?= $pricing["nom_pricing"] ?>">
                                 </div>
                                 <div class="options">

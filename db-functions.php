@@ -27,6 +27,11 @@ function bandwidthChange($bandwidth,$id){
     $dbStatement = database()->prepare("UPDATE pricing SET bandwidth = '$bandwidth' WHERE id_pricing = $id");
     $dbStatement->execute();
 }
+// This one for the domains
+function domainChange($domain,$id){
+    $dbStatement = database()->prepare("UPDATE pricing SET domain = '$domain' WHERE id_pricing = $id");
+    $dbStatement->execute();
+}
 // And this one for the onlinespace
 function onlinespaceChange($onlinespace,$id){
     $dbStatement = database()->prepare("UPDATE pricing SET onlinespace = '$onlinespace' WHERE id_pricing = $id");
