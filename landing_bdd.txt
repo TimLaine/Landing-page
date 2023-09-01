@@ -19,6 +19,15 @@
 CREATE DATABASE IF NOT EXISTS `landing` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `landing`;
 
+-- Listage de la structure de table landing. email
+CREATE TABLE IF NOT EXISTS `email` (
+  `id_email` int NOT NULL AUTO_INCREMENT,
+  `email` varchar(50) NOT NULL DEFAULT '',
+  PRIMARY KEY (`id_email`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+-- Listage des données de la table landing.email : ~0 rows (environ)
+
 -- Listage de la structure de table landing. pricing
 CREATE TABLE IF NOT EXISTS `pricing` (
   `id_pricing` int NOT NULL,
@@ -36,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `pricing` (
 
 -- Listage des données de la table landing.pricing : ~3 rows (environ)
 INSERT INTO `pricing` (`id_pricing`, `nom_pricing`, `prix`, `nb_ventes`, `bandwidth`, `onlinespace`, `reduction`, `support`, `domain`, `hidden_fees`) VALUES
-	(1, 'Starter', 9, 0, 1, 500, 0, NULL, 1, NULL),
-	(2, 'Advanced', 19, 0, 2, 1000, 0, 1, 2, NULL),
+	(1, 'Starter', 9, 2, 1, 500, 0, NULL, 1, NULL),
+	(2, 'Advanced', 19, 2, 2, 1000, 0, 1, 2, NULL),
 	(3, 'Professional', 29, 0, 3, 2000, 0, 1, 0, NULL);
 
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
