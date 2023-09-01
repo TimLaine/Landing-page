@@ -29,6 +29,10 @@ if(isset($_POST['submit'])){
         bandwidthChange($pricing["bandwidth"],$_GET["id"]);
         onlinespaceChange($pricing["onlinespace"],$_GET["id"]);
         domainChange($pricing["domain"],$_GET["id"]);
+        header("Location:admin.php");
     }
 }
-header("Location:admin.php");
+if($_GET['action'] == "add"){
+    saleUp($_GET['id']);
+    header("Location:index.php");
+}

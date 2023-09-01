@@ -261,7 +261,7 @@ require("db-functions.php");
                             <div class="cardleft">
                                 <p><i class="fa-regular fa-circle-check"></i>Bandwidth</p>
                                 <p><i class="fa-regular fa-circle-check"></i>Onlinespace</p>
-                                <p><i class="fa-regular <?= $SupportMark ?>"></i>Support.No</p>
+                                <p><i class="fa-regular <?= $SupportMark ?>"></i>Support</p>
                                 <p><i class="fa-regular fa-circle-check"></i>Domain</p>
                                 <p><i class="fa-regular <?= $HiddenFeesMark ?>"></i>Hidden Fees</p>
                             </div>
@@ -273,8 +273,8 @@ require("db-functions.php");
                                     <p><?= $HiddenFees ?></p>
                                 </div>
                             </div>
-                            <form action="traitement-admin.php" method="POST">
-                                <button type="submit" name="submit">Join Now</button>
+                            <form action="traitement-admin.php?id=<?= $pricing["id_pricing"] ?>&action=add" method="POST">
+                                <button type="submit" name="submit" class="add">Join Now</button>
                             </form>
                         </div>
                         <?php } ?>

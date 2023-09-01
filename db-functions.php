@@ -37,3 +37,7 @@ function onlinespaceChange($onlinespace,$id){
     $dbStatement = database()->prepare("UPDATE pricing SET onlinespace = '$onlinespace' WHERE id_pricing = $id");
     $dbStatement->execute();
 }
+function saleUp($id){
+    $dbStatement = database()->prepare("UPDATE pricing SET nb_ventes = nb_ventes+1 WHERE id_pricing = $id");
+    $dbStatement->execute();
+}
