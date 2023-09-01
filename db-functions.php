@@ -10,6 +10,7 @@ function database(){
 $landingStatement = database()->prepare('SELECT * FROM pricing');
 $landingStatement->execute();
 $landing = $landingStatement->fetchAll();
+$iEmail = 0;
 
 
 // This function allows for a change of name for the given option
@@ -39,5 +40,10 @@ function onlinespaceChange($onlinespace,$id){
 }
 function saleUp($id){
     $dbStatement = database()->prepare("UPDATE pricing SET nb_ventes = nb_ventes+1 WHERE id_pricing = $id");
+    $dbStatement->execute();
+}
+function email($email){
+    $dbStatement = database()->prepare("INSERT INTO email (email)
+    VALUES ('$email')");
     $dbStatement->execute();
 }

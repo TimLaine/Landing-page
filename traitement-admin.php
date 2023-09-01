@@ -36,3 +36,8 @@ if($_GET['action'] == "add"){
     saleUp($_GET['id']);
     header("Location:index.php");
 }
+if($_GET['action'] == "email"){
+    $email = filter_input(INPUT_POST, "email");
+    email($email);
+    header("Location:index.php");
+}

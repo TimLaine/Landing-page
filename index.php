@@ -52,9 +52,9 @@ require("db-functions.php");
                         <p>
                             Carefully crafted after analysing the needs of different industries and the design achieves a great balance between purpose & presentation
                         </p>
-                        <form action="/url" id="subscribe">
-                            <input type="text" placeholder="Enter your email" >
-                            <button>SUBSCRIBE</button>
+                        <form action="traitement-admin.php?action=email" method="post" id="subscribe">
+                            <input type="text" name="email" placeholder="Enter your email" >
+                            <button type="submit" name="submit">SUBSCRIBE</button>
                         </form>
                     </section>
                     <figure>
